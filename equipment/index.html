@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomedical Equipment </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <path d="M3 15h6"/>
+                    <path d="M6 12v6"/>
+                </svg>
+                <h1>Biomedical Equipment </h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="search-section">
+            <circle cx="11" cy="11" r="8"/>
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m21 21-4.3-4.3"/>
+                </svg>
+                <input type="text" id="searchInput" placeholder="Search equipment...">
+            </div>
+            <div class="category-filter" id="categoryFilter">
+                <button class="category-btn active" data-category="All">All</button>
+                <button class="category-btn" data-category="Imaging">Imaging</button>
+                <button class="category-btn" data-category="Monitoring">Monitoring</button>
+                <button class="category-btn" data-category="Diagnostic">Diagnostic</button>
+                <button class="category-btn" data-category="Therapeutic">Therapeutic</button>
+                <button class="category-btn" data-category="Life Support">Life Support</button>
+            </div>
+        </div>
+
+        <div class="equipment-grid" id="equipmentGrid">
+            <!-- Equipment cards will be inserted here by JavaScript -->
+        </div>
+
+        <div id="noResults" class="no-results hidden">
+            <p>No equipment found matching your search criteria.</p>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
